@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MONOGRID Clone | Contact</title>
+    <title>MONOGRID Clone | Project Index</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +16,9 @@
     <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- LENIS SMOOTH SCROLL (MISSING SCRIPT FIXED!) -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
 </head>
-<body class="bg-black text-light overflow-hidden contact-split-page new-contact-theme">
+<body class="bg-black text-light overflow-hidden split-page works-split">
 
     <!-- Preloader -->
     <div id="app-loading-container">
@@ -33,80 +32,87 @@
     <!-- Custom Cursor -->
     <div class="custom-cursor"></div>
 
-    <!-- Abstract Halftone Background (Now Green) -->
-    <div class="contact-bg-green"></div>
-
-    <!-- Header Unified -->
+    <!-- Header -->
     <header class="header">
         <a href="index.html" class="header-logo">MONOGRID.</a>
         <nav class="header-nav">
             <a href="index.html" class="nav-link">Home</a>
             <a href="works.html" class="nav-link">Work</a>
             <a href="about.html" class="nav-link">About</a>
-            <a href="contact.html" class="nav-link active">Contact</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <main class="contact-v2-main">
-        <div class="cv-left">
-            <h1 class="cv-giant-title">Hello,<br>future.</h1>
-            <p class="cv-sub">Let's create something beautifully brutally digital.</p>
-            
-            <div class="cv-info-grid">
-                <div>
-                    <h4>NEW BUSINESS</h4>
-                    <a href="mailto:hello@monogrid.com" class="cv-link">hello@monogrid.com</a>
+    <main class="split-main">
+        
+        <!-- Top Title Area -->
+        <div class="works-top">
+            <div class="wt-left">
+                <h1 class="wt-title">Project index</h1>
+                <div class="wt-filters">
+                    <span class="active">ALL</span>,
+                    <span>WEB-BASED EXPERIENCES</span>,
+                    <span>CONTENT PRODUCTION</span>,
+                    <span>INSTALLATIONS / EVENTS</span>,
+                    <span>AR, VR, GAMES</span>
                 </div>
-                <div>
-                    <h4>JOIN US</h4>
-                    <a href="mailto:jobs@monogrid.com" class="cv-link">jobs@monogrid.com</a>
-                </div>
+            </div>
+            <div class="wt-right">
+                <input type="text" class="wt-search" placeholder="Search projects..">
             </div>
         </div>
 
-        <div class="cv-right">
-            <form class="cv-form">
-                <div class="cv-form-row">
-                    <input type="text" placeholder="FIRST NAME*" required>
-                    <input type="text" placeholder="LAST NAME*" required>
+        <!-- Split Columns -->
+        <div class="works-columns">
+            
+            <!-- Left Column: List -->
+            <div class="works-col-left">
+                <!-- Project Item -->
+                <div class="w-item" data-img="https://images.unsplash.com/photo-1599839556350-08e7b3aeacbd?q=80&w=2670&auto=format&fit=crop">
+                    <div class="w-item-num">[01]</div>
+                    <div class="w-item-title">Bvlgari - Infinito, Serpenti<br>on Apple Vision Pro</div>
+                    <div class="w-item-arrow">↗</div>
                 </div>
-                <div class="cv-form-row">
-                    <input type="email" placeholder="E-MAIL*" required>
-                    <input type="text" placeholder="COMPANY">
+                
+                <!-- Project Item -->
+                <div class="w-item" data-img="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2670&auto=format&fit=crop">
+                    <div class="w-item-num">[02]</div>
+                    <div class="w-item-title">IKEA – Complete Sleep<br>DOOH Campaign</div>
+                    <div class="w-item-arrow">↗</div>
                 </div>
-                <div class="cv-form-row">
-                    <textarea placeholder="HOW CAN WE HELP YOU?*" rows="4" required></textarea>
+
+                <!-- Project Item (Active) -->
+                <div class="w-item active" data-img="https://images.unsplash.com/photo-1590736969955-71cc94801759?q=80&w=2670&auto=format&fit=crop">
+                    <div class="w-item-num">[03]</div>
+                    <div class="w-item-title">Dolce & Gabbana Beauty - Velvet<br>Fragrance Collection Experience</div>
+                    <div class="w-item-arrow">↗</div>
                 </div>
-                <div class="form-checkbox">
-                    <label class="custom-checkbox">
-                        <input type="checkbox" required>
-                        <span class="checkmark"></span>
-                        <p>I agree to the <a href="#">privacy terms</a>.</p>
-                    </label>
+
+                <!-- Project Item -->
+                <div class="w-item" data-img="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop">
+                    <div class="w-item-num">[04]</div>
+                    <div class="w-item-title">Bvlgari - Serpenti Infinito VR Experience</div>
+                    <div class="w-item-arrow">↗</div>
                 </div>
-                <button type="submit" class="cv-submit" data-cursor-text="SUBMIT">SEND INQUIRY</button>
-            </form>
+
+                <!-- Project Item -->
+                <div class="w-item" data-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2672&auto=format&fit=crop">
+                    <div class="w-item-num">[05]</div>
+                    <div class="w-item-title">Dolce&Gabbana Residences<br>– Immersive Room</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+            </div>
+
+            <!-- Right Column: Image Grid -->
+            <div class="works-col-right">
+                <div class="w-preview-container">
+                    <img id="w-preview-img" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" alt="Preview">
+                </div>
+            </div>
+            
         </div>
     </main>
-
-    <!-- Footer Unified -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-top">
-                <h2 data-cursor-text="SAY HI!">SAY<br>HELLO.</h2>
-                <a href="mailto:hello@monogrid.com" class="footer-email">hello@monogrid.com</a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 MONOGRID. ALL RIGHTS RESERVED.</p>
-                <div class="footer-links">
-                    <a href="#">Instagram</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- Scripts -->
     <script src="app.js"></script>
