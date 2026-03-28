@@ -1016,49 +1016,131 @@ a {
 
 
 @media (max-width: 768px) {
+    /* Header Navigation */
     .header {
         padding: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
 
     .header-nav {
-        display: none;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        -ms-overflow-style: none;  
+        scrollbar-width: none;  
+    }
+    
+    .header-nav::-webkit-scrollbar { 
+        display: none; 
     }
 
-    /* Could add a burger menu here */
-    .work-section {
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    /* Hero / General Content Layouts */
+    .hero-title {
+        font-size: 14vw;
+    }
+    
+    .page-heading {
+        padding: 0 1.5rem;
+    }
+
+    /* Featured Works Grid (Index) */
+    .featured-works-section {
         padding: 6rem 1.5rem;
     }
 
-    .work-grid {
-        display: flex;
+    .fw-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .fw-title {
+        font-size: 1.5rem;
+    }
+
+    /* Split Concept for Works and Contact */
+    .works-columns {
         flex-direction: column;
-        gap: 4rem;
     }
 
-    .work-item {
-        margin-top: 0 !important;
+    .works-col-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        height: 50vh;
     }
 
+    .works-col-right {
+        height: 50vh;
+        padding: 1rem;
+    }
+
+    .w-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .w-item-title {
+        font-size: 1.2rem;
+    }
+
+    /* Contact Form Tweaks (below 900px already handles stacking, tweak paddings) */
+    .contact-v2-main {
+        padding: 10rem 1.5rem 4rem;
+    }
+
+    .cv-form {
+        padding: 1.5rem;
+    }
+
+    /* About Section */
+    .about-hero {
+        padding: 10rem 1.5rem 2rem;
+    }
+    
+    .about-image-section {
+        padding: 0 1.5rem 6rem;
+    }
+
+    .about-image-wrapper {
+        height: 50vh;
+    }
+
+    /* Global Footer */
     .footer {
         padding: 6rem 1.5rem 2rem;
     }
 
+    .footer-content {
+        gap: 4rem;
+    }
+
     .footer-bottom {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: flex-start;
         gap: 2rem;
+        font-size: 0.8rem;
     }
 
+    .footer-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Disable Custom Cursor on Touch Devices */
     .custom-cursor {
-        display: none;
+        display: none !important;
     }
 
-    body {
-        cursor: auto;
+    *, *::before, *::after {
+        cursor: auto !important;
     }
 
-    a {
-        cursor: pointer;
+    a, button, input, textarea {
+        cursor: pointer !important;
     }
 }
 
