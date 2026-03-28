@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONOGRID Clone | Creative Digital Agency</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis (Smooth Scroll) -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="bg-dark text-light overflow-hidden">
+
+    <!-- Preloader -->
+    <div id="app-loading-container">
+        <div id="app-loading">
+            <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="2"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <header class="header">
+        <a href="index.html" class="header-logo">MONOGRID.</a>
+        <nav class="header-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="works.html" class="nav-link">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <!-- Hero Section -->
+            <section class="hero">
+                <canvas id="hero-canvas"></canvas>
+                <div class="hero-content">
+                    <h1 class="hero-title">WE ARE<br>CREATIVE<br>TECHNOLOGISTS</h1>
+                    <p class="hero-subtitle">Pushing the boundaries of digital experiences.</p>
+                </div>
+                <div class="hero-scroll-indicator">Scroll down</div>
+            </section>
+
+            <!-- Featured Works Section -->
+            <section id="work" class="featured-works-section">
+                <div class="container container-fluid">
+                    <div class="fw-header">
+                        ( OUR FEATURED WORKS )
+                    </div>
+                    
+                    <div class="fw-grid">
+                        <!-- Project 1 -->
+                        <div class="fw-item" data-cursor-text="VIEW">
+                            <div class="fw-image">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" alt="Diesel">
+                            </div>
+                            <div class="fw-tags">
+                                <span>WEB-BASED EXPERIENCES</span>
+                                <span>GAMES</span>
+                                <span>INSTALLATIONS / EVENTS</span>
+                            </div>
+                            <h3 class="fw-title">Diesel - Diesel Egg Hunt</h3>
+                            <p class="fw-desc">Brief description about the diesel egg hunt experiential campaign pushing the boundaries of WebGL.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="fw-item" data-cursor-text="VIEW">
+                            <div class="fw-image">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop" alt="Loro Piana">
+                            </div>
+                            <div class="fw-tags">
+                                <span>INSTALLATIONS / EVENTS</span>
+                            </div>
+                            <h3 class="fw-title">Loro Piana - Projection Mapping at Bergdorf Goodman NY</h3>
+                            <p class="fw-desc">Interactive projection mapping experience on the facade of Bergdorf Goodman in New York.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="fw-item" data-cursor-text="VIEW">
+                            <div class="fw-image">
+                                <img src="https://images.unsplash.com/photo-1614850715649-1d0106293bd1?q=80&w=2670&auto=format&fit=crop" alt="Valentino">
+                            </div>
+                            <div class="fw-tags">
+                                <span>WEB-BASED EXPERIENCES</span>
+                            </div>
+                            <h3 class="fw-title">Valentino Garavani and Vans - Immersive Web Experience</h3>
+                            <p class="fw-desc">An immersive 3D digital experience for the launch of a new collaborative collection.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Marquee Section -->
+            <section class="marquee-section">
+                <div class="marquee-inner">
+                    <span>CREATE EXPERIENCES • PUSH BOUNDARIES • INNOVATE • </span>
+                    <span>CREATE EXPERIENCES • PUSH BOUNDARIES • INNOVATE • </span>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <footer id="contact" class="footer">
+                <div class="container footer-content">
+                    <div class="footer-top">
+                        <h2>LET'S<br>TALK.</h2>
+                        <a href="mailto:hello@monogrid.com" class="footer-email">hello@monogrid.com</a>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">LinkedIn</a>
+                        </div>
+                        <div class="footer-copyright">
+                            © 2026 MONOGRID Clone. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="webgl.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

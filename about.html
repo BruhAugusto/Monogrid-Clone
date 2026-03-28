@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONOGRID Clone | About</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis (Smooth Scroll) -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+</head>
+<body class="bg-dark text-light overflow-hidden about-page">
+
+    <!-- Preloader -->
+    <div id="app-loading-container">
+        <div id="app-loading">
+            <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="2"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-logo">MONOGRID.</a>
+        <nav class="header-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="works.html" class="nav-link">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <section class="about-hero">
+                <div class="container container-fluid">
+                    <h1 class="about-title">WE BUILD<br>DIGITAL<br>REALITIES.</h1>
+                    <p class="about-description">MONOGRID is a creative digital production company. We specialize in Interactive Experiences, AR/VR, WebGL, and installations that push the boundaries of technology and design.</p>
+                </div>
+            </section>
+
+            <section class="about-image-section">
+                <div class="container">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542314831-c6a4d14d8c1e?q=80&w=2670&auto=format&fit=crop" alt="Studio Image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <footer class="footer">
+                <div class="container footer-content">
+                    <div class="footer-top border-top">
+                        <h2>LET'S<br>TALK.</h2>
+                        <a href="mailto:hello@monogrid.com" class="footer-email">hello@monogrid.com</a>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">LinkedIn</a>
+                        </div>
+                        <div class="footer-copyright">
+                            © 2026 MONOGRID Clone. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
