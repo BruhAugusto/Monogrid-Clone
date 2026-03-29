@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- 2.8 WORKS SPLIT PAGE LOGIC ---
     const wItems = document.querySelectorAll('.w-item');
     const wPreviewImg = document.getElementById('w-preview-img');
+    const wSearch = document.querySelector('.wt-search'); // Works search input
 
     if(wItems.length > 0 && wPreviewImg) {
         wItems.forEach(item => {
@@ -180,6 +181,40 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
             });
+        });
+
+        // Search Filter Logic
+        if (wSearch) {
+            wSearch.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                wItems.forEach(item => {
+                    const textContent = item.textContent.toLowerCase();
+                    if (textContent.includes(query)) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        }
+    }
+
+    // --- 2.9 CONTACT FORM HANDLER ---
+    const contactForm = document.querySelector('.cv-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate form submission success
+            const submitBtn = contactForm.querySelector('.cv-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = "SENT SUCCESSFULLY!";
+            submitBtn.style.backgroundColor = "#fff";
+            
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.backgroundColor = "#00ff00";
+                contactForm.reset();
+            }, 3000);
         });
     }
 
