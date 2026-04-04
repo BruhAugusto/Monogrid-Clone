@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Augusto | Video Editor & Motion Designer</title>
+    <meta name="description" content="Bruno Augusto — Video Editor & Motion Designer based in Joinville, Brazil. Specialized in VFX, Motion Graphics, Color Grading and Storytelling Editing.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis (Smooth Scroll) -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="bg-dark text-light overflow-hidden">
+
+    <!-- Preloader -->
+    <div id="app-loading-container">
+        <div id="app-loading">
+            <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="2"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <header class="header">
+        <a href="index.html" class="header-logo">BRUNO.</a>
+        <nav class="header-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="works.html" class="nav-link">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <!-- Hero Section -->
+            <section class="hero">
+                <canvas id="hero-canvas"></canvas>
+                <div class="hero-content">
+                    <h1 class="hero-title">VIDEO<br>EDITOR &<br>MOTION</h1>
+                    <p class="hero-subtitle">Crafting visual stories through motion, VFX & digital art.</p>
+                </div>
+                <div class="hero-scroll-indicator">Scroll down</div>
+            </section>
+
+            <!-- Featured Works Section -->
+            <section id="work" class="featured-works-section">
+                <div class="container container-fluid">
+                    <div class="fw-header">
+                        ( SELECTED WORKS )
+                    </div>
+                    
+                    <div class="fw-grid">
+                        <!-- Project 1 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/AD Breackdown.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/AD Breackdown.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>VIDEO EDITING</span>
+                            </div>
+                            <h3 class="fw-title">AD Breakdown</h3>
+                            <p class="fw-desc">Fast-paced editing breakdown showing workflow and dynamic cuts.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 2 - Image -->
+                        <div class="fw-item" data-cursor-text="VIEW">
+                            <div class="fw-image">
+                                <img src="assets/images/Sci-Fi City.png" alt="Sci-Fi City">
+                            </div>
+                            <div class="fw-tags">
+                                <span>3D ART</span>
+                            </div>
+                            <h3 class="fw-title">Sci-Fi City</h3>
+                            <p class="fw-desc">A detailed futuristic cityscape pushing the limits of digital world-building and cinematic lighting.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 3 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/CrativeDesign.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/CrativeDesign.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>MOTION GRAPHICS</span>
+                            </div>
+                            <h3 class="fw-title">Creative Design</h3>
+                            <p class="fw-desc">Smooth motion graphics exploring typography, color, and dynamic transitions.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 4 - Image -->
+                        <div class="fw-item" data-cursor-text="VIEW">
+                            <div class="fw-image">
+                                <img src="assets/images/GlowingRing.png" alt="Glowing Ring">
+                            </div>
+                            <div class="fw-tags">
+                                <span>3D ART</span>
+                                <span>VFX</span>
+                            </div>
+                            <h3 class="fw-title">Glowing Ring</h3>
+                            <p class="fw-desc">Mystical glowing artifact with volumetric light and particle simulations.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 5 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/YellowGoogleMapAnimation.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/YellowGoogleMapAnimation.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>MOTION GRAPHICS</span>
+                            </div>
+                            <h3 class="fw-title">Yellow Google Map</h3>
+                            <p class="fw-desc">Stylized UI motion graphics with neon yellow accents for a mapping presentation.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 6 - Image -->
+                        <div class="fw-item" data-cursor-text="VIEW">
+                            <div class="fw-image">
+                                <img src="assets/images/Cosmetic Spray Bottle1.png" alt="Cosmetic Product Visualization">
+                            </div>
+                            <div class="fw-tags">
+                                <span>3D ART</span>
+                                <span>PRODUCT</span>
+                            </div>
+                            <h3 class="fw-title">Cosmetic Visualization</h3>
+                            <p class="fw-desc">High-end product rendering for cosmetic spray bottle with realistic materials and lighting.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+                        
+                        <!-- Project 7 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/MotionGraphicsOrange.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/MotionGraphicsOrange.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>MOTION GRAPHICS</span>
+                            </div>
+                            <h3 class="fw-title">Orange Motion</h3>
+                            <p class="fw-desc">Abstract geometric shapes and dynamic text animations set in an orange monochromatic theme.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 8 - Image -->
+                        <div class="fw-item" data-cursor-text="VIEW">
+                            <div class="fw-image">
+                                <img src="assets/images/AncientRing.png" alt="Ancient Ring">
+                            </div>
+                            <div class="fw-tags">
+                                <span>3D ART</span>
+                            </div>
+                            <h3 class="fw-title">Ancient Ring</h3>
+                            <p class="fw-desc">Detailed 3D modeled ancient ring featuring ruined aesthetics and environmental storytelling.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 9 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/YellowSkullAnimation.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/YellowSkullAnimation.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>VFX</span>
+                                <span>MOTION</span>
+                            </div>
+                            <h3 class="fw-title">Yellow Skull</h3>
+                            <p class="fw-desc">Edgy animation loop featuring a stylized 3D skull and glitch motion aesthetics.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 10 - Image -->
+                        <div class="fw-item" data-cursor-text="VIEW">
+                            <div class="fw-image">
+                                <img src="assets/images/Medicine Pills Cup1.png" alt="Medicine Pills Cup">
+                            </div>
+                            <div class="fw-tags">
+                                <span>3D ART</span>
+                                <span>PRODUCT</span>
+                            </div>
+                            <h3 class="fw-title">Medicine Pills Cup</h3>
+                            <p class="fw-desc">Minimalist product rendering showcasing pharmaceutical items with clean studio lighting.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 11 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/Video0001-0150.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/Video0001-0150.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>ANIMATION</span>
+                            </div>
+                            <h3 class="fw-title">Visual Sequence 150</h3>
+                            <p class="fw-desc">Dynamic motion sequence exploring spatial design and animated elements.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 12 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/Video0001-0250.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/Video0001-0250.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>VFX</span>
+                            </div>
+                            <h3 class="fw-title">Visual Sequence 250</h3>
+                            <p class="fw-desc">High-key visual effects sequence showcasing fluid movement and geometry.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 13 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/0001-0270.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/0001-0270.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>MOTION GRAPHICS</span>
+                            </div>
+                            <h3 class="fw-title">Abstract Journey</h3>
+                            <p class="fw-desc">Abstract motion graphics piece with an emphasis on seamless loop transitions.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                        <!-- Project 14 - Video -->
+                        <div class="fw-item fw-video-item" data-cursor-text="VIEW" data-video="assets/videos/Video0001-0120.mp4">
+                            <div class="fw-image fw-video-thumb">
+                                <video class="portfolio-video" src="assets/videos/Video0001-0120.mp4#t=0.1" muted loop preload="metadata"></video>
+                                <div class="video-play-overlay"><span>▶</span></div>
+                            </div>
+                            <div class="fw-tags">
+                                <span>3D ART</span>
+                            </div>
+                            <h3 class="fw-title">Concept 120</h3>
+                            <p class="fw-desc">Short atmospheric concept render focused on lighting and texture.</p>
+                            <div class="fw-arrow">↘</div>
+                        </div>
+
+                    </div>
+
+                    <div style="text-align: center; margin-top: 6rem; margin-bottom: 2rem;">
+                        <a href="works.html" class="view-all-btn" data-cursor-text="ALL">VIEW ALL WORKS</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Marquee Section -->
+            <section class="marquee-section">
+                <div class="marquee-inner">
+                    <span>VIDEO EDITING • MOTION GRAPHICS • VFX • COLOR GRADING • STORYTELLING • </span>
+                    <span>VIDEO EDITING • MOTION GRAPHICS • VFX • COLOR GRADING • STORYTELLING • </span>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <footer id="contact" class="footer">
+                <div class="container footer-content">
+                    <div class="footer-top">
+                        <h2>LET'S<br>TALK.</h2>
+                        <a href="mailto:brunocardososteffen@gmail.com" class="footer-email">brunocardososteffen@gmail.com</a>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer-links">
+                            <a href="https://www.instagram.com/brunoaugusto" target="_blank">Instagram</a>
+                            <a href="https://www.behance.net/pedropichau" target="_blank">Behance</a>
+                            <a href="https://www.linkedin.com/in/pedropichau" target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="footer-copyright">
+                            © 2026 Bruno Augusto. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="webgl.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

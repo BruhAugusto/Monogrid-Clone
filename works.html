@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Augusto | Project Index</title>
+    <meta name="description" content="Full portfolio of Bruno Augusto — videos, motion graphics, 3D art, VFX and more.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+</head>
+<body class="bg-black text-light works-split">
+
+    <!-- Preloader -->
+    <div id="app-loading-container">
+        <div id="app-loading">
+            <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="2"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="header-logo">BRUNO.</a>
+        <nav class="header-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="works.html" class="nav-link active">Work</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="split-main">
+        
+        <!-- Top Title Area -->
+        <div class="works-top">
+            <div class="wt-left">
+                <h1 class="wt-title">Project index</h1>
+                <div class="wt-filters">
+                    <span class="active" data-filter="all">ALL</span>,
+                    <span data-filter="motion">MOTION GRAPHICS</span>,
+                    <span data-filter="vfx">VFX</span>,
+                    <span data-filter="3d">3D ART</span>,
+                    <span data-filter="video">VIDEO EDITING</span>
+                </div>
+            </div>
+            <div class="wt-right">
+                <input type="text" class="wt-search" id="works-search" placeholder="Search projects..">
+            </div>
+        </div>
+
+        <!-- Split Columns -->
+        <div class="works-columns">
+            
+            <!-- Left Column: Scrollable List -->
+            <div class="works-col-left" id="works-list" data-lenis-prevent="true">
+
+                <!-- ===== VIDEOS ===== -->
+
+                <div class="w-item" data-filter="video" data-img="assets/videos/Video0001-0150.mp4" data-type="video">
+                    <div class="w-item-num">[55]</div>
+                    <div class="w-item-title">Visual Sequence 150</div>
+                    <div class="w-item-tag">ANIMATION</div>
+                    <div class="w-item-arrow">→</div>
+                </div>
+
+                <div class="w-item" data-filter="video" data-img="assets/videos/Video0001-0250.mp4" data-type="video">
+                    <div class="w-item-num">[56]</div>
+                    <div class="w-item-title">Visual Sequence 250</div>
+                    <div class="w-item-tag">VFX</div>
+                    <div class="w-item-arrow">→</div>
+                </div>
+
+                <div class="w-item" data-filter="video" data-img="assets/videos/0001-0270.mp4" data-type="video">
+                    <div class="w-item-num">[57]</div>
+                    <div class="w-item-title">Abstract Journey</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">→</div>
+                </div>
+
+                <div class="w-item" data-filter="video" data-img="assets/videos/Video0001-0120.mp4" data-type="video">
+                    <div class="w-item-num">[58]</div>
+                    <div class="w-item-title">Concept 120</div>
+                    <div class="w-item-tag">3D ART</div>
+                    <div class="w-item-arrow">→</div>
+                </div>
+
+                <div class="w-item active" data-filter="motion video" data-img="assets/videos/90sAnimation.mp4" data-type="video">
+                    <div class="w-item-num">[01]</div>
+                    <div class="w-item-title">90s Animation</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="video" data-img="assets/videos/AD Breackdown.mp4" data-type="video">
+                    <div class="w-item-num">[02]</div>
+                    <div class="w-item-title">AD Breakdown</div>
+                    <div class="w-item-tag">VIDEO EDITING</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/AproximateZoomDoors.mp4" data-type="video">
+                    <div class="w-item-num">[03]</div>
+                    <div class="w-item-title">Approximate Zoom Doors</div>
+                    <div class="w-item-tag">ANIMATION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/BlackandWhiteSaturn.mp4" data-type="video">
+                    <div class="w-item-num">[04]</div>
+                    <div class="w-item-title">Black & White Saturn</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx video" data-img="assets/videos/CameraBlurConections.mp4" data-type="video">
+                    <div class="w-item-num">[05]</div>
+                    <div class="w-item-title">Camera Blur Connections</div>
+                    <div class="w-item-tag">VFX / VIDEO EDITING</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx" data-img="assets/videos/CameraBlurVulcano.mp4" data-type="video">
+                    <div class="w-item-num">[06]</div>
+                    <div class="w-item-title">Camera Blur Volcano</div>
+                    <div class="w-item-tag">VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion video" data-img="assets/videos/CassinoBetRoleta.mp4" data-type="video">
+                    <div class="w-item-num">[07]</div>
+                    <div class="w-item-title">Cassino Bet Roleta</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/CircularSistemBlackandWhite.mp4" data-type="video">
+                    <div class="w-item-num">[08]</div>
+                    <div class="w-item-title">Circular System B&W</div>
+                    <div class="w-item-tag">ANIMATION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/ClosureTunnel.mp4" data-type="video">
+                    <div class="w-item-num">[09]</div>
+                    <div class="w-item-title">Closure Tunnel</div>
+                    <div class="w-item-tag">ANIMATION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/ColorAnimation.mp4" data-type="video">
+                    <div class="w-item-num">[10]</div>
+                    <div class="w-item-title">Color Animation</div>
+                    <div class="w-item-tag">COLOR GRADING / MOTION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="video" data-img="assets/videos/CrashOutTV.mp4" data-type="video">
+                    <div class="w-item-num">[11]</div>
+                    <div class="w-item-title">CrashOut TV</div>
+                    <div class="w-item-tag">VIDEO EDITING</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/CrativeDesign.mp4" data-type="video">
+                    <div class="w-item-num">[12]</div>
+                    <div class="w-item-title">Creative Design</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/CreateAnimation.mp4" data-type="video">
+                    <div class="w-item-num">[13]</div>
+                    <div class="w-item-title">Create Animation</div>
+                    <div class="w-item-tag">ANIMATION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx motion" data-img="assets/videos/CyberpunkAnimationWarning.mp4" data-type="video">
+                    <div class="w-item-num">[14]</div>
+                    <div class="w-item-title">Cyberpunk Warning</div>
+                    <div class="w-item-tag">VFX / MOTION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx" data-img="assets/videos/DarkForestFire.mp4" data-type="video">
+                    <div class="w-item-num">[15]</div>
+                    <div class="w-item-title">Dark Forest Fire</div>
+                    <div class="w-item-tag">VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="video" data-img="assets/videos/DontWasteYourTime.mp4" data-type="video">
+                    <div class="w-item-num">[16]</div>
+                    <div class="w-item-title">Don't Waste Your Time</div>
+                    <div class="w-item-tag">VIDEO EDITING</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="video" data-img="assets/videos/DoorLightFutureMovie.mp4" data-type="video">
+                    <div class="w-item-num">[17]</div>
+                    <div class="w-item-title">Door Light — Future Movie</div>
+                    <div class="w-item-tag">VIDEO EDITING</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/GeometryMinimal.mp4" data-type="video">
+                    <div class="w-item-num">[18]</div>
+                    <div class="w-item-title">Geometry Minimal</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx" data-img="assets/videos/GlassBlurTexture.mp4" data-type="video">
+                    <div class="w-item-num">[19]</div>
+                    <div class="w-item-title">Glass Blur Texture</div>
+                    <div class="w-item-tag">VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion vfx" data-img="assets/videos/GreenElevatorGlow.mp4" data-type="video">
+                    <div class="w-item-num">[20]</div>
+                    <div class="w-item-title">Green Elevator Glow</div>
+                    <div class="w-item-tag">VFX / MOTION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/Idade - MG.mp4" data-type="video">
+                    <div class="w-item-num">[21]</div>
+                    <div class="w-item-title">Idade MG</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/MinimalGeometry.mp4" data-type="video">
+                    <div class="w-item-num">[22]</div>
+                    <div class="w-item-title">Minimal Geometry</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/MotionChains.mp4" data-type="video">
+                    <div class="w-item-num">[23]</div>
+                    <div class="w-item-title">Motion Chains</div>
+                    <div class="w-item-tag">ANIMATION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/MotionGraphicsOrange.mp4" data-type="video">
+                    <div class="w-item-num">[24]</div>
+                    <div class="w-item-title">Motion Graphics Orange</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/MotionPaths.mp4" data-type="video">
+                    <div class="w-item-num">[25]</div>
+                    <div class="w-item-title">Motion Paths</div>
+                    <div class="w-item-tag">ANIMATION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx" data-img="assets/videos/PowerFlash.mp4" data-type="video">
+                    <div class="w-item-num">[26]</div>
+                    <div class="w-item-title">Power Flash</div>
+                    <div class="w-item-tag">VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx" data-img="assets/videos/PowerGlow.mp4" data-type="video">
+                    <div class="w-item-num">[27]</div>
+                    <div class="w-item-title">Power Glow</div>
+                    <div class="w-item-tag">VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx motion" data-img="assets/videos/PowerfulVisuals.mp4" data-type="video">
+                    <div class="w-item-num">[28]</div>
+                    <div class="w-item-title">Powerful Visuals</div>
+                    <div class="w-item-tag">VFX / MOTION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx" data-img="assets/videos/RadialBlur.mp4" data-type="video">
+                    <div class="w-item-num">[29]</div>
+                    <div class="w-item-title">Radial Blur</div>
+                    <div class="w-item-tag">VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d vfx" data-img="assets/videos/SpacePlanetProximate.mp4" data-type="video">
+                    <div class="w-item-num">[30]</div>
+                    <div class="w-item-title">Space Planet Proximate</div>
+                    <div class="w-item-tag">3D ART / VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/SquareAnimation.mp4" data-type="video">
+                    <div class="w-item-num">[31]</div>
+                    <div class="w-item-title">Square Animation</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion vfx" data-img="assets/videos/TheHorizon.mp4" data-type="video">
+                    <div class="w-item-num">[32]</div>
+                    <div class="w-item-title">The Horizon</div>
+                    <div class="w-item-tag">MOTION / VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/YellowGoogleMapAnimation.mp4" data-type="video">
+                    <div class="w-item-num">[33]</div>
+                    <div class="w-item-title">Yellow Google Map Animation</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion vfx" data-img="assets/videos/YellowSkullAnimation.mp4" data-type="video">
+                    <div class="w-item-num">[34]</div>
+                    <div class="w-item-title">Yellow Skull Animation</div>
+                    <div class="w-item-tag">VFX / MOTION</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="vfx" data-img="assets/videos/gaussian.mp4" data-type="video">
+                    <div class="w-item-num">[35]</div>
+                    <div class="w-item-title">Gaussian</div>
+                    <div class="w-item-tag">VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion" data-img="assets/videos/grafico - MG.mp4" data-type="video">
+                    <div class="w-item-num">[36]</div>
+                    <div class="w-item-title">Gráfico MG</div>
+                    <div class="w-item-tag">MOTION GRAPHICS</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="motion video" data-img="assets/videos/nazismo - MG.mp4" data-type="video">
+                    <div class="w-item-num">[37]</div>
+                    <div class="w-item-title">Nazismo MG</div>
+                    <div class="w-item-tag">MOTION / VIDEO</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <!-- ===== 3D IMAGES ===== -->
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/Abstract Orbs.png" data-type="image">
+                    <div class="w-item-num">[38]</div>
+                    <div class="w-item-title">Abstract Orbs</div>
+                    <div class="w-item-tag">3D ART</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/AlienLandscape.png" data-type="image">
+                    <div class="w-item-num">[39]</div>
+                    <div class="w-item-title">Alien Landscape</div>
+                    <div class="w-item-tag">3D ART</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/AncientColiseu.png" data-type="image">
+                    <div class="w-item-num">[40]</div>
+                    <div class="w-item-title">Ancient Coliseu</div>
+                    <div class="w-item-tag">3D ART / ARCHITECTURE</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/AncientRing.png" data-type="image">
+                    <div class="w-item-num">[41]</div>
+                    <div class="w-item-title">Ancient Ring</div>
+                    <div class="w-item-tag">3D ART</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/BurnedPlanet.png" data-type="image">
+                    <div class="w-item-num">[42]</div>
+                    <div class="w-item-title">Burned Planet</div>
+                    <div class="w-item-tag">3D ART</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/Cosmetic Spray Bottle1.png" data-type="image">
+                    <div class="w-item-num">[43]</div>
+                    <div class="w-item-title">Cosmetic Product Visualization</div>
+                    <div class="w-item-tag">3D ART / PRODUCT</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/Fractal1.png" data-type="image">
+                    <div class="w-item-num">[44]</div>
+                    <div class="w-item-title">Fractal Study</div>
+                    <div class="w-item-tag">3D ART / CGI</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/GlowingRing.png" data-type="image">
+                    <div class="w-item-num">[45]</div>
+                    <div class="w-item-title">Glowing Ring</div>
+                    <div class="w-item-tag">3D ART / VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/InfernalGates.png" data-type="image">
+                    <div class="w-item-num">[46]</div>
+                    <div class="w-item-title">Infernal Gates</div>
+                    <div class="w-item-tag">3D ART / VFX</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/LANDSCAPE1.png" data-type="image">
+                    <div class="w-item-num">[47]</div>
+                    <div class="w-item-title">Epic Landscape</div>
+                    <div class="w-item-tag">3D ART</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/Medicine Pills Cup1.png" data-type="image">
+                    <div class="w-item-num">[48]</div>
+                    <div class="w-item-title">Medicine Pills Cup</div>
+                    <div class="w-item-tag">3D ART / PRODUCT</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/Octopus1.png" data-type="image">
+                    <div class="w-item-num">[49]</div>
+                    <div class="w-item-title">Octopus</div>
+                    <div class="w-item-tag">3D ART / CGI</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/OrthagonicalRestaurant.png" data-type="image">
+                    <div class="w-item-num">[50]</div>
+                    <div class="w-item-title">Orthogonal Restaurant</div>
+                    <div class="w-item-tag">3D ART / INTERIOR</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/PlanetEarth.png" data-type="image">
+                    <div class="w-item-num">[51]</div>
+                    <div class="w-item-title">Planet Earth</div>
+                    <div class="w-item-tag">3D ART / CGI</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/Sci-Fi City.png" data-type="image">
+                    <div class="w-item-num">[52]</div>
+                    <div class="w-item-title">Sci-Fi City</div>
+                    <div class="w-item-tag">3D ART</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d motion" data-img="assets/images/Serum Animation1.png" data-type="image">
+                    <div class="w-item-num">[53]</div>
+                    <div class="w-item-title">Serum Animation</div>
+                    <div class="w-item-tag">3D ART / PRODUCT</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+                <div class="w-item" data-filter="3d" data-img="assets/images/Spherical Liquid Sci-Fi.png" data-type="image">
+                    <div class="w-item-num">[54]</div>
+                    <div class="w-item-title">Spherical Liquid Sci-Fi</div>
+                    <div class="w-item-tag">3D ART / CGI</div>
+                    <div class="w-item-arrow">↗</div>
+                </div>
+
+            </div><!-- /.works-col-left -->
+
+            <!-- Right Column: Sticky Preview -->
+            <div class="works-col-right">
+                <div class="w-preview-container">
+                    <img id="w-preview-img" src="" alt="Preview" style="display:none; opacity:0;">
+                    <video id="w-preview-video" src="" muted loop playsinline style="display:none; opacity:0;"></video>
+                </div>
+                <div class="w-preview-meta">
+                    <p id="w-preview-label">—</p>
+                    <span id="w-preview-type">—</span>
+                </div>
+            </div>
+
+        </div><!-- /.works-columns -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
