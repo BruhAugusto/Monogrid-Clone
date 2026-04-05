@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruno Augusto | Contact</title>
     <meta name="description" content="Get in touch with Bruno Augusto — Video Editor & Motion Designer.">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- GSAP & ScrollTrigger -->
+    <!-- GSAP for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- LENIS SMOOTH SCROLL -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!-- EMAILJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("3JvzAgjz3Bk2VAT9R"); // INITIALIZING WITH PUBLIC KEY
+        })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
+
 <body class="bg-black text-light overflow-hidden contact-split-page new-contact-theme">
 
     <!-- Preloader -->
@@ -53,7 +65,7 @@
         <div class="cv-left">
             <h1 class="cv-giant-title">Hello,<br>future.</h1>
             <p class="cv-sub">Let's create something beautifully and brutally digital.</p>
-            
+
             <div class="cv-info-grid">
                 <div>
                     <h4>NEW BUSINESS</h4>
@@ -61,7 +73,7 @@
                 </div>
                 <div>
                     <h4>SOCIAL</h4>
-                    <a href="https://www.instagram.com/brunoaugusto" target="_blank" class="cv-link">@brunoaugusto</a>
+                    <a href="https://www.instagram.com/concept.augusto/" target="_blank" class="cv-link">@brunoaugusto</a>
                 </div>
                 <div>
                     <h4>BEHANCE</h4>
@@ -69,33 +81,101 @@
                 </div>
                 <div>
                     <h4>LINKEDIN</h4>
-                    <a href="https://www.linkedin.com/in/pedropichau" target="_blank" class="cv-link">Bruno Augusto</a>
+                    <a href="https://www.linkedin.com/in/bruno-augusto-cardoso-593988263/" target="_blank" class="cv-link">Bruno Augusto</a>
                 </div>
             </div>
         </div>
 
         <div class="cv-right">
-            <form class="cv-form">
+            <form class="cv-form" id="contactForm">
+                <!-- Web3Forms Access Key will be injected via JS -->
+
                 <div class="cv-form-row">
-                    <input type="text" placeholder="FIRST NAME*" required>
-                    <input type="text" placeholder="LAST NAME*" required>
+                    <input type="text" name="First Name" placeholder="FIRST NAME*" required>
+                    <input type="text" name="Last Name" placeholder="LAST NAME*" required>
                 </div>
                 <div class="cv-form-row">
-                    <input type="email" placeholder="E-MAIL*" required>
-                    <input type="text" placeholder="COMPANY">
+                    <input type="email" name="Email" placeholder="E-MAIL*" required>
+                    <input type="text" name="Company" placeholder="COMPANY">
                 </div>
                 <div class="cv-form-row">
-                    <textarea placeholder="HOW CAN I HELP YOU?*" rows="4" required></textarea>
+                    <textarea name="Message" placeholder="HOW CAN I HELP YOU?*" rows="4" required></textarea>
                 </div>
                 <div class="form-checkbox">
                     <label class="custom-checkbox">
-                        <input type="checkbox" required>
+                        <input type="checkbox" name="Privacy Terms Agreed" required>
                         <span class="checkmark"></span>
                         <p>I agree to the <a href="#">privacy terms</a>.</p>
                     </label>
                 </div>
                 <button type="submit" class="cv-submit" data-cursor-text="SUBMIT">SEND MESSAGE</button>
+
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+                        e.preventDefault();
+
+                        // Grab modal elements
+                        const modal = document.getElementById('success-modal');
+                        const submitBtn = this.querySelector('.cv-submit');
+                        const originalBtnText = submitBtn.innerText;
+
+                        // Change button explicitly while loading
+                        submitBtn.innerText = "SENDING...";
+                        submitBtn.style.pointerEvents = "none";
+
+                        const formData = new FormData(this);
+                        const formProps = Object.fromEntries(formData);
+
+                        // ============================================
+                        // MAP FORMAT FOR EMAILJS TEMPLATE
+                        const templateParams = {
+                            First_Name: formProps["First Name"],
+                            Last_Name: formProps["Last Name"],
+                            Email: formProps["Email"],
+                            Company: formProps["Company"],
+                            Message: formProps["Message"]
+                        };
+                        // ============================================
+
+                        try {
+                            const response = await emailjs.send(
+                                "service_o91ohnj", // SERVICE ID
+                                "template_uq9affk", // TEMPLATE ID
+                                templateParams
+                            );
+
+                            if (response.status === 200) {
+                                // Exibe o pop-up instantaneamente! (Funciona até testando no PC localmente)
+                                modal.style.display = 'flex';
+                                modal.offsetHeight;
+                                modal.classList.add('active');
+                                setTimeout(() => {
+                                    this.reset();
+                                    submitBtn.innerText = originalBtnText;
+                                    submitBtn.style.pointerEvents = "auto";
+                                }, 500);
+                            } else {
+                                alert("Error sending message. Please try again.");
+                                submitBtn.innerText = originalBtnText;
+                                submitBtn.style.pointerEvents = "auto";
+                            }
+                        } catch (err) {
+                            alert("Network error. Please check your connection.");
+                            submitBtn.innerText = originalBtnText;
+                            submitBtn.style.pointerEvents = "auto";
+                        }
+                    });
+                </script>
             </form>
+        </div>
+
+        <!-- Success Modal Overlay -->
+        <div id="success-modal" class="modal-overlay">
+            <div class="modal-content">
+                <a href="index.html" class="modal-close" data-cursor-text="CLOSE">✕</a>
+                <h2 class="modal-title">SENT.</h2>
+                <p class="modal-text">THANK YOU FOR REACHING OUT.<br>I WILL EVALUATE AND GET BACK TO YOU SOON.</p>
+            </div>
         </div>
     </main>
 
@@ -109,9 +189,9 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Bruno Augusto. ALL RIGHTS RESERVED.</p>
                 <div class="footer-links">
-                    <a href="https://www.instagram.com/brunoaugusto" target="_blank">Instagram</a>
+                    <a href="https://www.instagram.com/concept.augusto/" target="_blank">Instagram</a>
                     <a href="https://www.behance.net/pedropichau" target="_blank">Behance</a>
-                    <a href="https://www.linkedin.com/in/pedropichau" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/bruno-augusto-cardoso-593988263/" target="_blank">LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -120,4 +200,6 @@
     <!-- Scripts -->
     <script src="app.js"></script>
 </body>
+
 </html>
+
