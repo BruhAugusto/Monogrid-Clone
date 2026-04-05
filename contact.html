@@ -168,15 +168,6 @@
                 </script>
             </form>
         </div>
-
-        <!-- Success Modal Overlay -->
-        <div id="success-modal" class="modal-overlay">
-            <div class="modal-content">
-                <a href="index.html" class="modal-close" data-cursor-text="CLOSE">✕</a>
-                <h2 class="modal-title">SENT.</h2>
-                <p class="modal-text">THANK YOU FOR REACHING OUT.<br>I WILL EVALUATE AND GET BACK TO YOU SOON.</p>
-            </div>
-        </div>
     </main>
 
     <!-- Footer Unified -->
@@ -196,6 +187,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Success Modal Overlay (Moved to body root to prevent CSS transform clipping) -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <a href="index.html" class="modal-close" data-cursor-text="CLOSE">✕</a>
+            <h2 class="modal-title">SENT.</h2>
+            <p class="modal-text">THANK YOU FOR REACHING OUT.<br>I WILL EVALUATE AND GET BACK TO YOU SOON.</p>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="app.js"></script>
